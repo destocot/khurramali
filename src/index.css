@@ -1,0 +1,498 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+
+/* defaults */
+
+:root {
+  font-size: 10px;
+
+  @media (max-width: 1024px) {
+    font-size: 9.75px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 9.5px;
+  }
+}
+
+.dark {
+  background-image: url("https://www.toptal.com/designers/subtlepatterns/uploads/what-the-hex-dark.png");
+  color: #cccccc;
+
+  .external__link {
+    color: white;
+  }
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  margin: 0;
+  background-image: url("https://www.toptal.com/designers/subtlepatterns/uploads/geometry.png");
+  font-size: 1.5rem;
+}
+
+a:focus {
+  outline: none;
+}
+
+.accent {
+  color: maroon;
+}
+
+.container {
+  max-width: 1024px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  min-height: calc(100vh - 12rem);
+}
+
+.colors {
+  position: absolute;
+  top: 2vh;
+  right: 2vw;
+  font: inherit;
+  color: maroon;
+  background: none;
+  outline: none;
+  margin: 0;
+  border: none;
+  font-size: 3rem;
+}
+
+/* header */
+
+.header {
+  margin: 0 auto;
+  max-width: 1280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 8rem;
+  padding: 2rem 4rem;
+}
+
+.title {
+  color: inherit;
+  text-decoration: none;
+  font-size: 4rem;
+  transition: all 0.2s;
+
+  &:hover,
+  &:focus {
+    color: maroon;
+  }
+}
+
+.nav {
+}
+
+.nav__link {
+  padding: 1rem 2rem;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.2s;
+  display: inline-block;
+
+  &:hover,
+  &:focus {
+    transform: rotate(-15deg) scale(1.05);
+  }
+}
+
+.active {
+  color: maroon;
+  text-decoration: underline;
+  text-underline-offset: 8px;
+}
+
+/* main */
+
+.home {
+  padding: 2rem 4rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.home__heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-transform: uppercase;
+
+  .Typewriter {
+    color: maroon;
+    font-weight: 400;
+  }
+}
+
+.about {
+  display: flex;
+  column-gap: 2rem;
+  align-items: center;
+
+  @media (max-width: 640px) {
+    flex-wrap: wrap;
+  }
+}
+
+.about__stats {
+  width: 225rem;
+}
+
+.about__info {
+}
+
+.about__bio {
+  line-height: 1.5;
+  font-size: 1.7rem;
+  margin: 0;
+  text-align: justify;
+  transition: all 0.2s;
+}
+
+.about__resume {
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  width: max-content;
+  margin: 2rem 1rem 0 auto;
+  padding: 1rem 5rem;
+  background-color: rgba(0, 0, 0, 0.025);
+  border: 1px solid maroon;
+  border-radius: 1rem;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.05);
+    outline: none;
+  }
+}
+
+.about__img {
+  border-radius: 100%;
+  width: 25rem;
+  display: block;
+  margin: 0 auto;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.techstack {
+  padding: 0 1rem;
+}
+
+.techstack__heading {
+  text-align: center;
+}
+
+.techstack__list {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 1rem;
+  justify-content: space-around;
+}
+
+.techstack__list svg {
+  margin: -2rem -1rem;
+  width: 14rem;
+  height: 14rem;
+  transition: all 0.2s;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+/* projects page */
+
+.projects {
+  padding: 2rem 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.projects__header {
+  text-transform: uppercase;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.projects__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.project {
+  box-sizing: border-box;
+  padding: 2rem 3rem;
+  border-radius: 1rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  width: 75%;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.project__name {
+  margin: 0;
+  font-weight: bold;
+}
+
+.project__desc {
+  margin: 1rem 0;
+}
+
+.project__links {
+  display: flex;
+  justify-content: space-around;
+
+  @media (max-width: 640px) {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+}
+
+.project__link {
+  padding: 0.5rem 4rem;
+  margin: 0.5rem 0;
+  text-decoration: none;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 1rem;
+  background-color: rgba(128, 0, 0, 0.2);
+  color: inherit;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.05);
+    background-color: rgba(128, 0, 0, 0.4);
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
+  }
+}
+
+.project__details {
+  animation: fade-in 1s 0.1s backwards;
+}
+
+.project__techstack {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 1rem;
+  justify-content: space-around;
+}
+
+.project__techstack svg {
+  margin: -1rem;
+  width: 11rem;
+  height: 11rem;
+  transition: all 0.2s;
+
+  &:hover {
+    width: 11.5rem;
+    height: 11.5rem;
+  }
+}
+
+/* poetry page */
+
+.poetry {
+  padding: 2rem 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.poetry__header {
+  text-transform: uppercase;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.almts {
+}
+
+.almts__title {
+  color: maroon;
+  text-decoration: underline;
+  text-underline-offset: 0.75rem;
+  margin: 0.5rem;
+}
+
+.almts__info {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  text-align: justify;
+
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+  }
+}
+
+.small-carousel {
+  position: relative;
+
+  @media (max-width: 768px) {
+    width: 50%;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 640px) {
+    width: 75%;
+  }
+}
+
+.almts__img {
+  width: 30rem;
+  height: 30rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  animation: fade-in 1s 0.1s backwards;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.left-arrow,
+.right-arrow {
+  position: absolute;
+  font-size: 1.75rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: all 0.2s;
+  padding: 0.2rem;
+  border-radius: 100%;
+
+  &:hover {
+    font-size: 2rem;
+  }
+}
+
+.left-arrow {
+  top: 50%;
+  left: 2%;
+  transform: translate(-2%, -50%);
+}
+
+.right-arrow {
+  top: 50%;
+  right: 2%;
+  transform: translate(-2%, -50%);
+}
+
+.almts__desc {
+  margin: 0;
+  line-height: 1.4;
+  font-size: 1.75rem;
+}
+
+.writings {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.writings__title {
+  color: maroon;
+  text-decoration: underline;
+  text-underline-offset: 0.75rem;
+  margin: 0.5rem;
+}
+
+.external__link {
+  transition: all 0.2s;
+  font-size: 2rem;
+  cursor: pointer;
+  color: black;
+  display: flex;
+  align-items: flex-end;
+  gap: 1rem;
+  text-decoration: none;
+  margin: 0.75rem 0;
+  transition: all 0.2s;
+
+  &:hover {
+    margin-left: 1rem;
+  }
+}
+
+.poems {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  position: relative;
+}
+
+.poem__img {
+  width: 30rem;
+  height: 30rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  cursor: pointer;
+  transition: all 0.2s;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.poem__img-large {
+  width: 60rem;
+  height: 60rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  cursor: pointer;
+  margin: 2rem auto;
+  transition: all 0.2s;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+/* footer */
+.footer {
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* not found */
+.not-found {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.not-found__img {
+  object-fit: cover;
+  height: calc(100vh - 12rem);
+  width: 100vw;
+}
+
+.not-found__message {
+  position: absolute;
+  top: 2vh;
+  right: 4vw;
+  font-size: 5rem;
+  margin: 0;
+}
