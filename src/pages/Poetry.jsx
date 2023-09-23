@@ -41,14 +41,16 @@ export default function PoetryPage() {
     <div className="poetry container">
       <h1 className="poetry__header">Poetry</h1>
       <section className="almts">
-        <h2 className="almts__title">A Little More Than Sentiments</h2>
-        <Link
-          className="external__link"
-          to="https://a.co/d/cS4Bw4D"
-          target="_blank"
-        >
-          <FaAmazon className="external__icon" /> check it out on amazon
-        </Link>
+        <div className="flex-col-container">
+          <h2 className="almts__title">A Little More Than Sentiments</h2>
+          <Link
+            className="external__link"
+            to="https://a.co/d/cS4Bw4D"
+            target="_blank"
+          >
+            <FaAmazon className="external__icon" /> check it out on amazon
+          </Link>
+        </div>
         <div className="almts__info">
           <div className="small-carousel">
             {img && <img className="almts__img" src={img} alt="" />}
@@ -82,7 +84,7 @@ export default function PoetryPage() {
         </div>
       </section>
       <section className="writings">
-        <div>
+        <div className="flex-col-container">
           <h2 className="writings__title">Other Writings</h2>
           <Link
             className="external__link"

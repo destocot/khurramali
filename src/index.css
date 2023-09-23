@@ -58,6 +58,17 @@ a:focus {
   font-size: 3rem;
 }
 
+.flex-col-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+
+  @media (max-width: 640px) {
+    flex-direction: column;
+  }
+}
+
 /* header */
 
 .header {
@@ -238,6 +249,14 @@ a:focus {
   width: 75%;
   cursor: pointer;
   transition: all 0.2s;
+
+  @media (max-width: 768px) {
+    width: 90%;
+  }
+
+  @media (max-width: 640px) {
+    width: 100%;
+  }
 }
 
 .project__name {
@@ -357,7 +376,7 @@ a:focus {
   }
 
   @media (max-width: 640px) {
-    width: 75%;
+    width: 100%;
   }
 }
 
@@ -430,9 +449,13 @@ a:focus {
   text-decoration: none;
   margin: 0.75rem 0;
   transition: all 0.2s;
+  width: fit-content;
+  padding: 0.5rem 1rem;
+  border-radius: 500px;
 
   &:hover {
-    margin-left: 1rem;
+    background-color: rgba(128, 0, 0, 0.2);
+    transform: scale(1.05);
   }
 }
 
@@ -441,6 +464,10 @@ a:focus {
   flex-wrap: wrap;
   gap: 2rem;
   position: relative;
+
+  @media (max-width: 768px) {
+    justify-content: center;
+  }
 }
 
 .poem__img {
@@ -452,6 +479,16 @@ a:focus {
 
   &:hover {
     transform: scale(1.05);
+  }
+
+  @media (max-width: 768px) {
+    width: 50rem;
+    height: 50rem;
+  }
+
+  @media (max-width: 640px) {
+    width: 100%;
+    height: auto;
   }
 }
 
