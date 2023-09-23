@@ -2,10 +2,10 @@ import { useEffect, useState } from "react";
 import { FaInstagram, FaAmazon } from "react-icons/fa6";
 import { FaAngleDoubleLeft, FaAngleDoubleRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import poems from "../lib/poems";
+import recent from "../lib/poems";
 
 export default function PoetryPage() {
-  const [poems, setPoems] = useState(poems);
+  const [poems, setPoems] = useState(recent);
   const [largePoem, setLargePoem] = useState(false);
   const [img, setImg] = useState("/assets/bookpic1.jpg");
 
