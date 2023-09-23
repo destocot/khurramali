@@ -17,10 +17,10 @@ import NotFound from "./pages/NotFound";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/khurramali/" element={<RootLayout />}>
-      <Route path="/khurramali/" element={<HomePage />} />
-      <Route path="/khurramali/projects" element={<ProjectsPage />} />
-      <Route path="/khurramali/poetry" element={<PoetryPage />} />
+    <Route path="/khurramali" element={<RootLayout />}>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/projects" element={<ProjectsPage />} />
+      <Route path="/poetry" element={<PoetryPage />} />
       <Route path="*" element={<NotFound />} />
     </Route>
   )
