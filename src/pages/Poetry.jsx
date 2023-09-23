@@ -2,9 +2,10 @@ import { useEffect, useState } from "react";
 import { FaInstagram, FaAmazon } from "react-icons/fa6";
 import { FaAngleDoubleLeft, FaAngleDoubleRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import poems from "../lib/poems";
 
 export default function PoetryPage() {
-  const [poems, setPoems] = useState([]);
+  const [poems, setPoems] = useState(poems);
   const [largePoem, setLargePoem] = useState(false);
   const [img, setImg] = useState("/assets/bookpic1.jpg");
 
@@ -23,19 +24,17 @@ export default function PoetryPage() {
   };
 
   useEffect(() => {
-    const fetchInstragramPosts = async () => {
-      const url = `https://graph.instagram.com/${
-        import.meta.env.VITE_USER_ID
-      }/media?access_token=${
-        import.meta.env.VITE_INST_ACCE_CODE
-      }&fields=media_url&limit=6`;
-
-      const res = await fetch(url);
-      const json = await res.json();
-
-      setPoems(json.data);
-    };
-    fetchInstragramPosts();
+    // const fetchInstragramPosts = async () => {
+    //   const url = `https://graph.instagram.com/${
+    //     import.meta.env.VITE_USER_ID
+    //   }/media?access_token=${
+    //     import.meta.env.VITE_INST_ACCE_CODE
+    //   }&fields=media_url&limit=6`;
+    //   const res = await fetch(url);
+    //   const json = await res.json();
+    //   setPoems(json.data);
+    // };
+    // fetchInstragramPosts();
   }, []);
 
   return (
