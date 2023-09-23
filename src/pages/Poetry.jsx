@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import recent from "../lib/poems";
 
 export default function PoetryPage() {
-  const [poems, setPoems] = useState(recent);
+  // const [poems, setPoems] = useState([]);
   const [largePoem, setLargePoem] = useState(false);
   const [img, setImg] = useState("/assets/bookpic1.jpg");
 
@@ -23,19 +23,19 @@ export default function PoetryPage() {
     }
   };
 
-  useEffect(() => {
-    // const fetchInstragramPosts = async () => {
-    //   const url = `https://graph.instagram.com/${
-    //     import.meta.env.VITE_USER_ID
-    //   }/media?access_token=${
-    //     import.meta.env.VITE_INST_ACCE_CODE
-    //   }&fields=media_url&limit=6`;
-    //   const res = await fetch(url);
-    //   const json = await res.json();
-    //   setPoems(json.data);
-    // };
-    // fetchInstragramPosts();
-  }, []);
+  // useEffect(() => {
+  // const fetchInstragramPosts = async () => {
+  //   const url = `https://graph.instagram.com/${
+  //     import.meta.env.VITE_USER_ID
+  //   }/media?access_token=${
+  //     import.meta.env.VITE_INST_ACCE_CODE
+  //   }&fields=media_url&limit=6`;
+  //   const res = await fetch(url);
+  //   const json = await res.json();
+  //   setPoems(json.data);
+  // };
+  // fetchInstragramPosts();
+  // }, []);
 
   return (
     <div className="poetry container">
@@ -93,7 +93,8 @@ export default function PoetryPage() {
           </Link>
         </div>
         <div className="poems">
-          {poems.map((poem) =>
+          {/* {poems.map((poem) => */}
+          {recent.map((poem) =>
             largePoem ? (
               largePoem === poem.id && (
                 <img
