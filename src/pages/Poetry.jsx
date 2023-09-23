@@ -6,18 +6,18 @@ import { Link } from "react-router-dom";
 export default function PoetryPage() {
   const [poems, setPoems] = useState([]);
   const [largePoem, setLargePoem] = useState(false);
-  const [img, setImg] = useState("src/assets/bookpic1.jpg");
+  const [img, setImg] = useState("/assets/bookpic1.jpg");
 
   const changeImage = () => {
-    if (img === "src/assets/bookpic1.jpg") {
+    if (img === "/assets/bookpic1.jpg") {
       setImg(null);
       setTimeout(() => {
-        setImg("src/assets/bookpic2.jpg");
+        setImg("/assets/bookpic2.jpg");
       }, 1);
     } else {
       setImg(null);
       setTimeout(() => {
-        setImg("src/assets/bookpic1.jpg");
+        setImg("/assets/bookpic1.jpg");
       }, 1);
     }
   };

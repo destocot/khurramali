@@ -14,7 +14,7 @@ export default function HomePage() {
           <div>
             <div className="home__heading">
               <img
-                src="src/assets/prof.jpg"
+                src="/assets/prof.jpg"
                 alt=""
                 className="about__img"
                 loading="lazy"
@@ -48,11 +48,7 @@ export default function HomePage() {
             of coding, all in the pursuit of creating a meaningful impact within
             the ever-evolving technology landscape.
           </p>
-          <a
-            className="about__resume"
-            href="src/assets/resu.pdf"
-            target="_blank"
-          >
+          <a className="about__resume" href="/assets/resu.pdf" target="_blank">
             <BsFiletypePdf />
             <span>Resume</span>
           </a>
