@@ -2991,6 +2991,6 @@ const techstacks = {
       </defs>
     </svg>
   ),
-};
+}
 
-export default techstacks;
+export default techstacks

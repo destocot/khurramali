@@ -1,11 +1,11 @@
-import TechStackLgt from "../components/TechStackLgt";
-import TechStackDrk from "../components/TechStackDrk";
-import { BsFiletypePdf } from "react-icons/bs";
-import { useOutletContext } from "react-router-dom";
-import Typewriter from "typewriter-effect";
+import TechStackLgt from '../components/TechStackLgt'
+import TechStackDrk from '../components/TechStackDrk'
+import { BsFiletypePdf, BsGithub, BsLinkedin } from 'react-icons/bs'
+import { Link, useOutletContext } from 'react-router-dom'
+import Typewriter from 'typewriter-effect'
 
 export default function HomePage() {
-  const colors = useOutletContext();
+  const colors = useOutletContext()
 
   return (
     <div className="home container">
@@ -22,7 +22,7 @@ export default function HomePage() {
               <h2>
                 <Typewriter
                   options={{
-                    strings: ["Software Engineer", "Mathematician", "Poet"],
+                    strings: ['Software Engineer', 'Mathematician', 'Poet'],
                     autoStart: true,
                     loop: true,
                     delay: 75,
@@ -34,7 +34,7 @@ export default function HomePage() {
         </div>
         <div className="about__info">
           <p className="about__bio">
-            Hello there! I go by the name{" "}
+            Hello there! I go by the name{' '}
             <span className="accent">Khurram </span>
             and I proudly call the wonderful city of Brooklyn, New York my home.
             At this very moment, I find myself fully immersed in an exciting
@@ -48,10 +48,32 @@ export default function HomePage() {
             of coding, all in the pursuit of creating a meaningful impact within
             the ever-evolving technology landscape.
           </p>
-          <a className="about__resume" href="/assets/resu.pdf" target="_blank">
-            <BsFiletypePdf />
-            <span>Resume</span>
-          </a>
+          <div className="about__contact">
+            <div className="about__links">
+              <a
+                href="https://github.com/destocot"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <BsGithub />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/khurram-ali1/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <BsLinkedin />
+              </a>
+            </div>
+            <a
+              className="about__resume"
+              href="/assets/Khurram%20Ali.pdf"
+              target="_blank"
+            >
+              <BsFiletypePdf />
+              <span>Resume</span>
+            </a>
+          </div>
         </div>
       </section>
       <div className="techstack">
@@ -61,5 +83,5 @@ export default function HomePage() {
         {colors ? <TechStackDrk /> : <TechStackLgt />}
       </div>
     </div>
-  );
+  )
 }

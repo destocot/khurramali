@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
 
 /* defaults */
 
@@ -15,7 +15,7 @@
 }
 
 .dark {
-  background-image: url("https://www.toptal.com/designers/subtlepatterns/uploads/what-the-hex-dark.png");
+  background-image: url('https://www.toptal.com/designers/subtlepatterns/uploads/what-the-hex-dark.png');
   color: #cccccc;
 
   .external__link {
@@ -24,9 +24,9 @@
 }
 
 body {
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
   margin: 0;
-  background-image: url("https://www.toptal.com/designers/subtlepatterns/uploads/geometry.png");
+  background-image: url('https://www.toptal.com/designers/subtlepatterns/uploads/geometry.png');
   font-size: 1.5rem;
 }
 
@@ -161,12 +161,41 @@ a:focus {
   transition: all 0.2s;
 }
 
+.about__contact {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+}
+
+.about__links {
+  display: flex;
+  gap: 2rem;
+}
+
+.about__links a {
+  color: black;
+}
+
+.about__links a svg {
+  font-size: 3.5rem;
+  transition: all 0.2s;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.05);
+    outline: none;
+  }
+}
+
+.about__links a:last-child svg {
+  color: #0077b5;
+}
+
 .about__resume {
   color: inherit;
   font: inherit;
   cursor: pointer;
   width: max-content;
-  margin: 2rem 1rem 0 auto;
   padding: 1rem 5rem;
   background-color: rgba(0, 0, 0, 0.025);
   border: 1px solid maroon;
