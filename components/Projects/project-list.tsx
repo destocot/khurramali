@@ -13,7 +13,7 @@ export const ProjectList = ({ projects }: ProjectListProps) => {
       {projects.map((project, idx) => (
         <div key={idx} className="flex flex-col">
           <h1 className="text-2xl font-bold tracking-tight">{project.title}</h1>
-          <Link key={idx} href={project.link}>
+          <Link key={idx} href={project.link} target="_blank">
             <div
               className={cn("p-2 rounded-md bg-white", {
                 "bg-blue-500": "bg-blue-500" === project.background,
