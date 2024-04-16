@@ -2,12 +2,15 @@ import type { Metadata } from "next";
 import { Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
+import Navbar from "./(home)/_components/Navbar";
+import { SecondaryNavbar } from "./(home)/_components/SecondaryNavbar";
+import Footer from "./(home)/_components/Footer";
 
 const spaceGrotesk = Space_Grotesk({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   // url of the application
-  metadataBase: new URL("http://localhost:3000"),
+  metadataBase: new URL("https://khurramali.site"),
 
   title: {
     template: "%s | Khurram Ali",
@@ -24,13 +27,13 @@ export const metadata: Metadata = {
     description:
       "Based in New York, I'm a Fullstack developer passionate about building a modern web application that users love..",
     // url of the application
-    url: "http://localhost:3000",
+    url: "https://khurramali.site",
     siteName: "Khurram Ali",
     // screenshot of application
     images: "/og.png",
     type: "website",
   },
-  keywords: ["daily web coding", "chensokheng", "dailywebcoding"],
+  keywords: ["giraffe reactor", "khurram ali", "giraffereactor"],
 };
 
 export default function RootLayout({
@@ -39,7 +42,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
       <body className={spaceGrotesk.className}>
         <ThemeProvider
           attribute="class"
@@ -48,7 +51,16 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <div className="min-h-screen bg-black overflow-x-hidden">
+            <div className="dark:bg-black bg-white dark:bg-grid-white/[0.05] bg-grid-black/[0.2] relative">
+              <div className="max-w-7xl mx-auto p-5">
+                <Navbar showResumeLabel />
+                <SecondaryNavbar />
+              </div>
+            </div>
             {children}
+            <div className="max-w-7xl mx-auto p-5 mt-20">
+              <Footer />
+            </div>
           </div>
         </ThemeProvider>
       </body>

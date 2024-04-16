@@ -1,6 +1,6 @@
+import { Title } from "@/components/Title";
 import { MovingBorderButton } from "@/components/ui/moving-border";
 import Link from "next/link";
-import { Title } from "@/app/(home)/_components/Title";
 
 export default function HeroSection() {
   return (
@@ -13,12 +13,10 @@ export default function HeroSection() {
             I&apos;m Khurram.
           </span>
         </h1>
-
         <p className="md:w-96 text-lg text-gray-300">
           Based in New York, I&apos;m a Fullstack developer passionate about
           building a modern web application that users love.
         </p>
-        <div id="contact" />
         <Link
           href="mailto:khurramcali@gmail.com"
           className="inline-block group"

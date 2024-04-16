@@ -6,7 +6,7 @@ const leftLinks = [
     label: "Home",
   },
   {
-    href: "/#contact",
+    href: "mailto:khurramcali@gmail.com",
     label: "Contact",
   },
   {
@@ -37,30 +37,26 @@ const rightLinks = [
 export const SecondaryNavbar = () => {
   return (
     <nav className="pt-5 pb-10 flex justify-between items-center animate-move-down text-sm">
-      <ul className="flex gap-3">
-        {leftLinks.map((link) => (
-          <li key={link.label}>
-            <Link
-              href={link.href}
-              className="text-gray-300 hover:text-green-500"
-            >
-              {link.label}
-            </Link>
-          </li>
-        ))}
-      </ul>
-      <ul className="flex gap-3">
-        {rightLinks.map((link) => (
-          <li key={link.label}>
-            <Link
-              href={link.href}
-              className="text-gray-300 hover:text-green-500"
-            >
-              {link.label}
-            </Link>
-          </li>
-        ))}
-      </ul>
+      <LinkList list={leftLinks} />
+      <LinkList list={rightLinks} />
     </nav>
   );
 };
+
+type LinkListProps = {
+  list: { href: string; label: string }[];
+};
+
+function LinkList({ list }: LinkListProps) {
+  return (
+    <ul className="flex gap-3">
+      {list.map((link) => (
+        <li key={link.label}>
+          <Link href={link.href} className="text-gray-300 hover:text-green-500">
+            {link.label}
+          </Link>
+        </li>
+      ))}
+    </ul>
+  );
+}
