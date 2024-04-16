@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     url: "https://khurramali.site",
     siteName: "Khurram Ali",
     // screenshot of application
-    images: "/og.png",
+    images: "/portfolio.jpg",
     type: "website",
   },
   keywords: ["giraffe reactor", "khurram ali", "giraffereactor"],
