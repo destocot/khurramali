@@ -38,7 +38,7 @@ export const SecondaryNavbar = () => {
   return (
     <nav className="pt-5 pb-10 flex justify-between items-center animate-move-down text-sm">
       <LinkList list={leftLinks} />
-      <LinkList list={rightLinks} />
+      {/* <LinkList list={rightLinks} /> */}
     </nav>
   );
 };

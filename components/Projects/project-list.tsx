@@ -22,6 +22,14 @@ export const ProjectList = ({ projects }: ProjectListProps) => {
                 "bg-rose-500": "bg-rose-500" === project.background,
                 "bg-gray-500": "bg-gray-500" === project.background,
                 "bg-yellow-500": "bg-yellow-500" === project.background,
+                "bg-purple-500": "bg-purple-500" === project.background,
+                "bg-lime-500": "bg-lime-500" === project.background,
+                "bg-amber-500": "bg-amber-500" === project.background,
+                "bg-stone-500": "bg-stone-500" === project.background,
+                "bg-teal-500": "bg-teal-500" === project.background,
+                "bg-orange-500": "bg-orange-500" === project.background,
+                "bg-cyan-500": "bg-cyan-500" === project.background,
+                "bg-indigo-500": "bg-indigo-500" === project.background,
               })}
             >
               <DirectionAwareHover
