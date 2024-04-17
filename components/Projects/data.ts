@@ -1,4 +1,5 @@
 import {
+  SiAppwrite,
   SiAxios,
   SiBootstrap,
   SiChakraui,
@@ -170,5 +171,15 @@ export const allProjects = [
       hoverImageUrl: "/portfolio-hover.gif",
     },
     background: "bg-indigo-500",
+  },
+  {
+    title: "Ticket Thursdays",
+    tech: [SiVite, SiStyledcomponents, SiTypescript, SiAppwrite],
+    link: "https://ticket-thursdays.netlify.app",
+    cover: {
+      imageUrl: "/ticketthursdays.jpg",
+      hoverImageUrl: "/ticketthursdays-hover.gif",
+    },
+    background: "",
   },
 ];
