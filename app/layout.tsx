@@ -2,9 +2,6 @@ import type { Metadata } from "next";
 import { Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
-import Navbar from "./(home)/_components/Navbar";
-import { SecondaryNavbar } from "./(home)/_components/SecondaryNavbar";
-import Footer from "./(home)/_components/Footer";
 
 const spaceGrotesk = Space_Grotesk({ subsets: ["latin"] });
 
@@ -50,18 +47,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className="min-h-screen bg-black overflow-x-hidden">
-            <div className="dark:bg-black bg-white dark:bg-grid-white/[0.05] bg-grid-black/[0.2] relative">
-              <div className="max-w-7xl mx-auto p-5">
-                <Navbar showResumeLabel />
-                <SecondaryNavbar />
-              </div>
-            </div>
-            {children}
-            <div className="max-w-7xl mx-auto p-5 mt-20">
-              <Footer />
-            </div>
-          </div>
+          {children}
         </ThemeProvider>
       </body>
     </html>
